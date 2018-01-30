@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.s.chat.ChatDialogsActivity">
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
@@ -26,7 +27,8 @@
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:clickable="true"
-        app:backgroundTint="@color/colorAccent"
+        android:focusable="true"
+        app:backgroundTint="@color/redd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_add" />

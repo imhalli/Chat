@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.s.chat.Adapter.ChatDialogsAdapters;
 import com.example.s.chat.Common.Comon;
@@ -22,6 +24,7 @@ import com.quickblox.chat.model.QBChatDialog;
 import com.quickblox.core.QBEntityCallback;
 import com.quickblox.core.exception.BaseServiceException;
 import com.quickblox.core.exception.QBResponseException;
+import com.quickblox.core.helper.StringifyArrayList;
 import com.quickblox.core.request.QBRequestGetBuilder;
 import com.quickblox.users.QBUsers;
 import com.quickblox.users.model.QBUser;
@@ -53,6 +56,8 @@ public class ChatDialogsActivity extends AppCompatActivity {
         });
 
         loadChatDialogs();
+
+
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override

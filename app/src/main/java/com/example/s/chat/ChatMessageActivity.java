@@ -1,12 +1,15 @@
 package com.example.s.chat;
 
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.s.chat.Adapter.ChatMessageAdapter;
 import com.example.s.chat.Common.Comon;
@@ -21,10 +24,13 @@ import com.quickblox.chat.model.QBChatMessage;
 import com.quickblox.chat.request.QBMessageGetBuilder;
 import com.quickblox.core.QBEntityCallback;
 import com.quickblox.core.exception.QBResponseException;
+import com.quickblox.core.request.QBRequestGetBuilder;
 
 import org.jivesoftware.smack.SmackException;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ChatMessageActivity extends AppCompatActivity {
 
@@ -45,6 +51,7 @@ public class ChatMessageActivity extends AppCompatActivity {
         initChatDialogs();
 
         retriveAllMessage();
+
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override

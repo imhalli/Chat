@@ -8,10 +8,15 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.s.chat.Holder.QBUsersHolder;
+import com.example.s.chat.Holder.QBChatMessagesHolder;
 import com.example.s.chat.R;
 import com.github.library.bubbleview.BubbleTextView;
 import com.quickblox.chat.QBChatService;
 import com.quickblox.chat.model.QBChatMessage;
+import com.quickblox.chat.request.QBMessageGetBuilder;
+
+import java.util.Date;
+import java.util.Calendar;
 
 import java.util.ArrayList;
 
